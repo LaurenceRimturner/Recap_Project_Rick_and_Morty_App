@@ -39,6 +39,7 @@ searchBar.addEventListener("submit", (event) => {
   page = 1;
   cardContainer.innerHTML = "";
   fetchCharacters();
+  event.target.reset();
 });
 
 // API Fetch
