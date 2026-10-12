@@ -20,6 +20,7 @@ let searchQuery = "";
 prevButton.addEventListener("click", () => {
   if (page > 1) {
     page--;
+    cardContainer.innerHTML = "";
     fetchCharacters();
   }
 });
