@@ -17,10 +17,15 @@ const searchQuery = "";
 async function fetchCharacters() {
   try {
     const response = await fetch("https://rickandmortyapi.com/api/character")
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    } 
+
   const data = await response.json()
   console.log(data);
+  
   } catch (error) {
-    console.log("Error Message: ", error);
+    console.log("Error Message: ", error.message);
   }
 }
 
