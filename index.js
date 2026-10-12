@@ -1,4 +1,4 @@
-import { createCharacterCard } from "./components/CharacterCard/CharacterCard.js"; 
+import { createCharacterCard } from "./components/CharacterCard/CharacterCard.js";
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
 const searchBarContainer = document.querySelector(
@@ -23,14 +23,18 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
+  if (page < maxPage) {
     page++;
     fetchCharacters();
+  }
 });
 
 // API Fetch
 async function fetchCharacters() {
   try {
-    const response = await fetch(`https://rickandmortyapi.com/api/character/?page=${page}`);
+    const response = await fetch(
+      `https://rickandmortyapi.com/api/character/?page=${page}`,
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
@@ -41,12 +45,12 @@ async function fetchCharacters() {
     for (const character of data.results) {
       const characterCard = createCharacterCard(character);
       cardContainer.append(characterCard);
+
+      pagination.textContent = `${page} / ${maxPage}`;
     }
   } catch (error) {
     console.log("Error Message: ", error.message);
   }
 }
-
-
 
 fetchCharacters();
