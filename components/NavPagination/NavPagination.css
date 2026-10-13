@@ -2,6 +2,13 @@
   height: 30px;
   display: grid;
   grid-template-columns: 100px 100px 100px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-secondary);
+  padding: 30px 100px;
+  align-content: center;
+  box-shadow: #16161d6e 4px 4px 10px;
 }
 
 .navigation__pagination {
