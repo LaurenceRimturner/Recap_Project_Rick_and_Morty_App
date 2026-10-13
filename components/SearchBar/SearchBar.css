@@ -1,5 +1,12 @@
 .search-bar-container {
-  width: 300px;
+  z-index: 1;
+  position: fixed;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .search-bar {
@@ -7,6 +14,9 @@
   background-color: var(--color-secondary);
   display: grid;
   grid-template-columns: 1fr 24px;
+  min-width: 500px;
+  min-height: 60px;
+  box-shadow: #16161d6e 4px 4px 10px;
 }
 
 .search-bar__input {
@@ -26,4 +36,8 @@
 
 .search-bar__icon {
   width: 20px;
+}
+
+input[type="text"] {
+  font-size: 18px;
 }

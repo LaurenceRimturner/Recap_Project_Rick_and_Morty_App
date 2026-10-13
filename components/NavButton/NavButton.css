@@ -1,7 +1,5 @@
 .button {
+  cursor: pointer;
   border: none;
-}
-
-.button:hover {
-  background-color: var(--color-secondary);
+  background-color: transparent;
 }
