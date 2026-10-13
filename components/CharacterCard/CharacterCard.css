@@ -65,6 +65,17 @@ li {
   list-style: none;
 }
 
-ul > p {
+.noCharFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.noCharFound img {
+  height: 750px;
+}
+
+.noCharFound > h2 {
   color: var(--color-secondary);
 }
