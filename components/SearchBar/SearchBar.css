@@ -1,4 +1,5 @@
 .search-bar-container {
+  width: 90%;
   z-index: 1;
   position: fixed;
   bottom: 1rem;
@@ -53,6 +54,7 @@ input[type="text"]::placeholder {
 
 @media screen and (min-width: 750px) {
   .search-bar-container {
+    width: fit-content;
     left: 1rem;
     transform: translate(0);
   }

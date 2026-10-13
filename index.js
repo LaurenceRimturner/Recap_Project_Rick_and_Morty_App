@@ -72,7 +72,7 @@ async function fetchCharacters() {
   } catch (error) {
     console.log("Error Message: ", error.message);
     cardContainer.innerHTML =
-      "<div class='noCharFound'><h2>Keine Charaktere gefunden.</h2><img src='./assets/RnMErrorImg.png'></div>";
+      "<div class='noCharFound'><h2>Keine Charaktere gefunden.</h2><img src='./assets/RnMErrorImg.png'       draggable='false'></div>";
     pagination.textContent = "0 / 0";
     prevButton.disabled = true;
     nextButton.disabled = true;

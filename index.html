@@ -11,12 +11,25 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+    <a href="#main" class="backToTopBtn" aria-label="Back to top"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="var(--primary-color)"
+      >
+        <path
+          d="M440-80v-647L256-544l-56-56 280-280 280 280-56 57-184-184v647h-80Z"
+        /></svg
+    ></a>
     <img
       class="Logo"
+      draggable="false"
       src="./assets/Rick_and_Morty-logo.png"
       alt="Rick and Morty Logo"
     />
-    <main>
+    <main id="main">
       <div class="search-bar-container" data-js="search-bar-container">
         <form action="" class="search-bar" data-js="search-bar">
           <input
