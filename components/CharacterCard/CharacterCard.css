@@ -64,3 +64,7 @@
 li {
   list-style: none;
 }
+
+ul > p {
+  color: var(--color-secondary);
+}
