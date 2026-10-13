@@ -30,8 +30,17 @@ main {
   margin-top: 150px;
 }
 
-.title {
-  padding: 10px 0;
+.Logo {
+  height: 75px;
   color: var(--color-secondary);
   position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+@media screen and (min-width: 925px) {
+  .Logo {
+    left: 1rem;
+    transform: translate(0);
+  }
 }

@@ -1,12 +1,14 @@
 .navigation {
   height: 30px;
+  width: fit-content;
   display: grid;
   grid-template-columns: 100px 100px 100px;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  bottom: 6rem;
+  right: 50%;
+  transform: translate(50%);
   background-color: var(--color-secondary);
-  padding: 30px 100px;
+  padding: 30px 0;
   align-content: center;
   box-shadow: #16161d6e 4px 4px 10px;
 }
@@ -14,4 +16,17 @@
 .navigation__pagination {
   display: grid;
   place-items: center;
+}
+
+@media screen and (min-width: 750px) {
+  .navigation {
+    bottom: 1rem;
+    right: 1rem;
+    transform: translate(0);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation {
+    top: 1rem;
+  }
 }
