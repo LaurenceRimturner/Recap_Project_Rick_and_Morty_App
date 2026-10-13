@@ -11,6 +11,7 @@
   padding: 30px 0;
   align-content: center;
   box-shadow: #16161d6e 4px 4px 10px;
+  justify-content: center;
 }
 
 .navigation__pagination {
