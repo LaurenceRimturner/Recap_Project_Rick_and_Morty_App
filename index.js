@@ -20,16 +20,14 @@ let searchQuery = "";
 prevButton.addEventListener("click", () => {
   if (page > 1) {
     page--;
-    
 
     for (let i = 0; i < 20; i++) {
       const lastCard = cardContainer.lastElementChild;
       if (lastCard) {
-        lastCard.remove()
+        lastCard.remove();
       }
     }
     pagination.textContent = `${page} / ${maxPage}`;
-    
   }
 });
 
@@ -61,7 +59,7 @@ async function fetchCharacters() {
     }
     const data = await response.json();
     maxPage = data.info.pages;
-    
+
     for (const character of data.results) {
       const characterCard = createCharacterCard(character);
       cardContainer.append(characterCard);
@@ -73,7 +71,8 @@ async function fetchCharacters() {
     nextButton.disabled = page === maxPage;
   } catch (error) {
     console.log("Error Message: ", error.message);
-    cardContainer.innerHTML = "<p>Keine Charaktere gefunden.</p>";
+    cardContainer.innerHTML =
+      "<div class='noCharFound'><h2>Keine Charaktere gefunden.</h2><img src='./assets/RnMErrorImg.png'></div>";
     pagination.textContent = "0 / 0";
     prevButton.disabled = true;
     nextButton.disabled = true;
