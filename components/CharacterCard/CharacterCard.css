@@ -53,12 +53,27 @@
   transform: translate(0, 0);
 }
 
+.card:hover .card__info-description,
+.card:hover .card__info-title {
+  border-bottom: 2px var(--color-primary) solid;
+  border-radius: 0;
+  padding: 5px 0;
+}
+
 .card__info-description {
   text-align: left;
+  border-bottom: 2px var(--color-secondary) solid;
+  border-radius: 0;
+  padding: 5px 0;
+  transition: all 0.25s ease-in-out;
 }
 
 .card__info-title {
   font-weight: 700;
+  transition: all 0.25s ease-in-out;
+  border-bottom: 2px var(--color-secondary) solid;
+  border-radius: 0;
+  padding: 5px 0;
 }
 
 li {
