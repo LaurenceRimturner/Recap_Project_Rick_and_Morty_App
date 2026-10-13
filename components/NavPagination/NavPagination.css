@@ -1,6 +1,6 @@
 .navigation {
   height: 30px;
-  width: fit-content;
+  width: 90%;
   display: grid;
   grid-template-columns: 100px 100px 100px;
   position: fixed;
@@ -20,8 +20,9 @@
 
 @media screen and (min-width: 750px) {
   .navigation {
+    width: fit-content;
     bottom: 1rem;
-    right: 1rem;
+    right: 6rem;
     transform: translate(0);
   }
 }

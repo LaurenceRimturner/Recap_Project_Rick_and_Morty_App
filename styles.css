@@ -8,12 +8,20 @@
   margin: 0;
   padding: 0;
   border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 :root {
   --color-primary: #161c1d;
   --color-secondary: #97ce4c;
   --font-family: system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 
 body {
@@ -38,6 +46,32 @@ main {
   transform: translate(-50%);
   z-index: 1;
 }
+
+.backToTopBtn {
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .backToTopBtn {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 12px 12px;
+    background-color: var(--color-secondary);
+    border: var(--color-primary) 3px solid;
+    z-index: 2;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      background-color: var(--color-primary);
+      border: var(--color-secondary) 3px solid;
+    }
+    &:hover svg {
+      fill: var(--color-secondary);
+    }
+  }
+}
+
 @media screen and (min-width: 925px) {
   .Logo {
     left: 1rem;
