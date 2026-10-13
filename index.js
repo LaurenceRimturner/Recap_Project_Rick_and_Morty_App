@@ -20,8 +20,16 @@ let searchQuery = "";
 prevButton.addEventListener("click", () => {
   if (page > 1) {
     page--;
-    cardContainer.innerHTML = "";
-    fetchCharacters();
+    
+
+    for (let i = 0; i < 20; i++) {
+      const lastCard = cardContainer.lastElementChild;
+      if (lastCard) {
+        lastCard.remove()
+      }
+    }
+    pagination.textContent = `${page} / ${maxPage}`;
+    
   }
 });
 
@@ -53,7 +61,7 @@ async function fetchCharacters() {
     }
     const data = await response.json();
     maxPage = data.info.pages;
-    console.log(data.results);
+    
     for (const character of data.results) {
       const characterCard = createCharacterCard(character);
       cardContainer.append(characterCard);
